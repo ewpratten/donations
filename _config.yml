@@ -1,0 +1,11 @@
+title: Evan Pratten - Donations
+description: >- # this means to ignore newlines until "baseurl:"
+  Donations landing page
+baseurl: ""
+url: "https://donate.retrylife.ca"
+
+# Build settings
+plugins:
+  - jekyll-redirect-from
+  - jemoji
+  - jekyll-seo-tag
