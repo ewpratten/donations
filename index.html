@@ -1,0 +1,45 @@
+---
+layout: page
+title: Landing
+---
+
+<script>
+
+    function validateCost(elem) {
+        if(!isNaN(elem.value) && !isNaN(parseFloat(elem.value))){
+            document.getElementById("continue-button").classList = "btn btn-info";
+            document.getElementById("continue-button").removeAttribute("disabled");
+        }else{
+            document.getElementById("continue-button").classList = "btn btn-secondary";
+            document.getElementById("continue-button").disabled = true;
+        }
+    }
+
+    function gotoPayment(elem) {
+        document.location = "/pay?c=" + document.getElementById("cost").value;
+    }
+    
+</script>
+
+<!--  Top Gap  -->
+<div style="height:30vh;"></div>
+
+<!-- Donation prompt -->
+<div style="text-align:center;">
+    <h1 class="fadein-element">Support My Work</h1>
+    <h3 class="fadein-element">Please enter the amount you'd like to contribute</h3>
+
+    <br><br>
+
+    <div class="input-group mb-3 fadein-element" style="max-width:450px; margin:auto;">
+        <div class="input-group-prepend">
+            <span class="input-group-text">CAD$</span>
+          </div>
+        <input type="text" class="form-control" value="5.00" type="number" min="1.00" step="1.00" aria-label="Donation amount" aria-describedby="continue-button" onkeyup="validateCost(this)" id="cost">
+        <div class="input-group-append">
+          <button class="btn btn-info" type="button" id="continue-button" onclick="gotoPayment(this);">Continue</button>
+        </div>
+      </div>
+
+</div>
+

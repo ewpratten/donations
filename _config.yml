@@ -4,6 +4,10 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: ""
 url: "https://donate.retrylife.ca"
 
+btc_address: 17KJxyTZvB36jpcRLjF7KsrwLVt4P6UKRh
+xlm_address: GBBUKCQQULS3TLGPKLHIFN2YZUAOTCZHW7ON7CFFJIY5QPFBWGYVA2YQ
+paypal_cid: sb
+
 # Build settings
 plugins:
   - jekyll-redirect-from
